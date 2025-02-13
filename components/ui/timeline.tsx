@@ -1,6 +1,5 @@
 "use client";
 import {
-    useMotionValueEvent,
     useScroll,
     useTransform,
     motion,
@@ -81,7 +80,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                             </h3>
                             {item.content}{" "}
                             <div className="lg:hidden mt-4 flex items-center gap-2">
-                                <h2 className="text-base font-semibold text-purple">View Details -> </h2>
+                                <h2 className="text-base font-semibold text-purple">View Details </h2>
                                 <a href={item.live} target="/blank">
                                     <MagicButton
                                         icon={<FaLocationArrow />}

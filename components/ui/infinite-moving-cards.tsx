@@ -11,10 +11,8 @@ export const InfiniteMovingCards = ({
     className,
 }: {
     items: {
-        image: string;
-        quote: string;
-        name: string;
         title: string;
+        quote: React.ReactNode;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -26,6 +24,7 @@ export const InfiniteMovingCards = ({
 
     useEffect(() => {
         addAnimation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const [start, setStart] = useState(false);
     function addAnimation() {
@@ -86,7 +85,7 @@ export const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items.map((item, idx) => (
+                {items.map((item) => (
                     <li
                         className=" max-w-full relative rounded-xl flex-shrink-0 p-4"
                         style={{
@@ -106,9 +105,6 @@ export const InfiniteMovingCards = ({
                             </span>
                             <div className="relative z-20 mt-2 flex flex-row items-center">
                                 <span className="flex flex-col gap-1">
-                                    <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                                        {item.name}
-                                    </span>
                                     <span className="text-center text-base leading-[1.6] text-purple font-semibold">
                                         {item.title}
                                     </span>

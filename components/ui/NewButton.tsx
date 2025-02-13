@@ -1,7 +1,7 @@
 import React from 'react';
 
-const NewButton = ({ title, icon, position, handleClick, otherClasses }: {
-    title: string; icon: React.ReactNode, position: string; handleClick?: () => void; otherClasses?: string;
+const NewButton = ({ title, icon, position,  }: {
+    title: string; icon: React.ReactNode, position: string;
 }) => {
     return (
         <div>
