@@ -29,7 +29,7 @@ const Hero = () => {
                         className='text-left text-sm md:text-md lg:text-lg'
                         words="I'm Tanzid, a passionate fullstack developer with expertise in building scalable web and mobile applications. I specialize in crafting seamless user experiences and robust backend systems. I'm always eager to learn and collaborate on innovative projects!" />
 
-                    <a href="/Tanzid.pdf" download="Tanzid_CV.pdf">
+                    <a href="/Tanzid.pdf" download="Tanzid_resume.pdf">
                         <MagicButton
                             icon={<IoMdDownload />}
                             title='Download CV' 
