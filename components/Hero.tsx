@@ -6,6 +6,7 @@ import { TypewriterEffectDemo } from './ui/TyperWritterText';
 import { ImageDp } from './ui/ImageDp';
 import MagicButton from './ui/MagicButton';
 import { IoMdDownload } from 'react-icons/io';
+import { socialMedia } from '@/data';
 
 const Hero = () => {
     return (
@@ -29,13 +30,27 @@ const Hero = () => {
                         className='text-left text-sm md:text-md lg:text-lg'
                         words="I'm Tanzid, a passionate fullstack developer with expertise in building scalable web and mobile applications. I specialize in crafting seamless user experiences and robust backend systems. I'm always eager to learn and collaborate on innovative projects!" />
 
-                    <a href="/Tanzid.pdf" download="Tanzid_resume.pdf">
-                        <MagicButton
-                            icon={<IoMdDownload />}
-                            title='Download CV' 
-                            position='right'
+                    <div className='flex gap-2'>
+                        <a href="/Tanzid.pdf" download="Tanzid_resume.pdf">
+                            <MagicButton
+                                icon={<IoMdDownload />}
+                                title='Download CV'
+                                position='right'
                             />
-                    </a>
+                        </a>
+                        <div className="flex items-center md:gap-3 gap-2">
+                            {socialMedia.map((info) => (
+                                <div
+                                    key={info.id}
+                                    className="w-9 h-9 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                                >
+                                    <a href={info.link} target="_blank">
+                                        <img src={info.img} alt="icons" width={20} height={20} />
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
                 <div className='rounded-full '>
                     <ImageDp />
