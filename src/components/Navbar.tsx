@@ -118,9 +118,9 @@ export default function Navbar({ sections }: NavbarProps) {
               <SheetHeader className="mb-8 text-left border-b border-white/10 pb-4">
                 <SheetTitle className="flex items-center gap-3 font-sans font-bold text-white">
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-black font-black text-xs">AR</span>
+                    <span className="text-black font-black text-xs">TK</span>
                   </div>
-                  <span className="uppercase tracking-widest text-xs">ALEX RIVERA</span>
+                  <span className="uppercase tracking-widest text-xs">Tanzid</span>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4">
